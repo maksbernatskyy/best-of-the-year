@@ -10,6 +10,10 @@
         <h1>Best Songs</h1>
     </header>
 
-    <main></main>
+    <main>
+        <ul>
+            <li th:each="song : ${songs}" th:text="${song.title}"/>
+        </ul>
+    </main>
 </body>
 </html>

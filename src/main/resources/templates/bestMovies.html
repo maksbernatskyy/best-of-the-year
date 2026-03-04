@@ -11,7 +11,9 @@
     </header>
 
     <main>
-        
+        <ul>
+            <li th:each="movie : ${movies}" th:text="${movie.title}" />
+        </ul>
     </main>
 </body>
 </html>

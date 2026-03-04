@@ -46,4 +46,19 @@ public class HomeController{
 
         return songs;
     }
+
+    @GetMapping("/bestMovies")
+    public String bestMovies(Model model) {
+        List<Movie> bestMovies = getBestMovies();
+        model.addAttribute("movies", bestMovies);
+        return "bestMovies";
+    }
+
+    @GetMapping("/bestSongs")
+    public String bestSongs(Model model) {
+        model.addAttribute("songs", getBestSongs());
+        return "bestSongs";
+    }
+    
+    
 }
